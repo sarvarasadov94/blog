@@ -10,7 +10,7 @@
 
         <hr>
 
-        <a href="{{route('admin.category.create')}}}" class="btn btn-primary pull-rigth"><i
+        <a href="{{route('admin.category.create')}}" class="btn btn-primary pull-rigth"><i
                 class="fa fa-plus-square-o"></i> Создать категорию</a>
         <table class="table table-striped">
             <thead>
@@ -21,9 +21,9 @@
             <tbody>
             @forelse($categories as $category)
                 <tr>
-                    <td>{{$category->title}}}</td>
-                    <td>{{$category->published}}}</td>
-                    <td><a href="{{route('admin.category.edit',['id'=>$category->id])}}}"><i class="fa fa-edit"></i></a>
+                    <td>{{$category->title}}</td>
+                    <td>{{$category->published}}</td>
+                    <td class="pull-right"><a href="{{route('admin.category.edit',['id'=>$category->id])}}"><i class="fa fa-edit"></i></a>
                     </td>
                 </tr>
             @empty
